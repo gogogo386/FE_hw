@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/aboutMe.css" />
+    <!--한글 글꼴-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--네비바 글꼴-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap"
+      rel="stylesheet"
+    />
+    <!--글꼴 추가-->
+    <title>고권혜 자기소개서!</title>
+  </head>
+
+  <body>
+    <header>
+      <div><b>About HYEHYE</b></div>
+    </header>
+    <br />
+    <hr />
+    <!--네비바-->
+    <nav>
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Bucketlist">Bucket list</a></li>
+        <li><a href="#Hobby">Hobby</a></li>
+        <li><a href="#about">About</a></li>
+        <br />
+      </ul>
+    </nav>
+    <hr />
+    <!--홈 페이지-->
+    <section id="Home" class="content">
+      <article>
+        <!--이미지 파일-->
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRefmemZZiRTmY-GBcfhcFtZJ1EGpVoa-Q_xA&s"
+          alt="안경만두 이미지"
+        />
+        <!--자기소개 작성-->
+        <h3><b>안녕하세요 권혜입니다 ε(˙o˙ з )з=≡=-･∴</b></h3>
+        <p>덕성여자대학교 가상현실융합학과</p>
+        <p>2003. 03. 17</p>
+        <p>INFJ</p>
+        <p>덕성 멋사 프론트엔드 13기 아기사자🦁</p>
+      </article>
+    </section>
+
+    <!--버킷리스트 페이지-->
+    <section id="Bucketlist" class="content" style="display: none">
+      <article>
+        <h3>🪼My Bucket List🪼</h3>
+        <ul>
+          <li>워홀 가기</li>
+          <li>가을에 서촌 걷기</li>
+          <li>이탈리아 가기</li>
+          <li>미슐랭 식당 가보기</li>
+          <li>연금 복권 당첨...</li>
+          <li>ETC.....</li>
+        </ul>
+        <h4>죽기 전까지 꼭 해보기..!</h4>
+      </article>
+    </section>
+
+    <!--취미 페이지-->
+    <section id="Hobby" class="content" style="display: none">
+      <article>
+        <h3>🪼My Hobbies🪼</h3>
+        <img
+          src="https://entertainimg.kbsmedia.co.kr/cms/uploads/CONTENTS_20250115090232_dd6ecfb0e1acf1e8a328cfc97cce8988.jpg"
+          alt="요즘 좋아하는 영화 이미지"
+        />
+        <h4>영화 보기</h4>
+        <p>영화 보러 가는 것을 좋아합니다.</p>
+        <p>최근 가장 좋아하는 영화는 콘클라베 입니다.</p>
+        <p>여유가 된다면 한 번 더 보고싶습니다.</p>
+        <img
+          src="https://www.nexteconomy.co.kr/news/photo/202312/22603_33250_3917.jpeg"
+          alt="좋아하는 책 이미지"
+        />
+        <h4>책 읽기</h4>
+        <p>사실 요즘에는 핸드폰 하느라 별로 책을 읽지 않습니다.</p>
+        <p>그래도 한달에 한권은 읽을려고 노력합니다.</p>
+        <p>최근 작별하지 않는다가 가장 좋았습니다.</p>
+
+        <img
+          src="https://peton.me/data/file/addPlace/%EC%88%B2%EC%98%A4_12_1.webp"
+          alt="좋아하는 카페 이미지"
+        />
+        <h4>느좋 카페 탐방</h4>
+        <p>느좋 카페에 가서 다이어리 쓰는 것을 좋아합니다.</p>
+        <p>제가 학교 근처에서 제일 좋아하는 카페는 숲오입니다.</p>
+      </article>
+    </section>
+    <!--소감 페이지 만들기-->
+    <section id="about" class="content" style="display: none">
+      <article>
+        <img
+          src="https://item.kakaocdn.net/do/da766714a9d8ac1bb328f653232c0e19616b58f7bf017e58d417ccb3283deeb3"
+          alt="후기 페이지 커햄 이미지"
+        />
+        <p>
+          먼저 월요일까지만 해도 완성하지 못 할 줄 알았는데 완성하게 돼서 너무
+          기쁩니다 !
+        </p>
+        <p>제 눈에도 완성도가 그렇게 높아보이진 않지만..</p>
+        <p>
+          다음에는 버킷리스트 부분을 체크박스로 투두리스트 처럼 구현해보고
+          싶습니다!
+        </p>
+        <p>
+          저도 원하는 것을 자유자재로 만들 수 있는 날까지 열심히 하겠습니다.
+        </p>
+      </article>
+    </section>
+
+    <!--링크 클릭 시 이동 만들기-->
+    <script>
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          document.querySelectorAll("section").forEach((section) => {
+            section.style.display = "none";
+          });
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.style.display = "block";
+          }
+        });
+      });
+
+      document.querySelector("#Home").style.display = "block";
+    </script>
+  </body>
+</html>
