@@ -10,56 +10,88 @@ hr {
 
 body {
   background-color: beige;
+}
 
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  nav li {
-    margin: 0 10px;
-  }
-  nav li a {
-    display: inline;
-    color: red;
-    text-align: center;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-family: "Boldonse", system-ui;
-    font-size: 40px;
-  }
-  .content {
-    font-family: "Diphylleia", serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    font-size: 25px;
-  }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+nav li {
+  margin: 0 10px;
+  display: inline;
+  color: red;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: "Boldonse", system-ui;
+  font-size: 40px;
+}
 
-  img {
-    width: 350px;
-    border-radius: 50%;
-    margin-top: 20px;
+.content {
+  font-family: "Diphylleia", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-size: 25px;
+}
+/* #input_id:checked ~ .section_class .article_class {
+  display: block;
+} */
+
+img {
+  width: 350px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+#Bucketlist ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+#Bucketlist li {
+  margin: 10px 0;
+  text-align: center;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: red;
+  transform: scale(1.3);
+}
+#Hobby img {
+  width: 350px;
+  margin-top: 20px;
+  border-radius: 0%;
+}
+/* section {
+  display: none;
   }
-  #Bucketlist ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  section:first-of-type {
     display: block;
-  }
+    } */
 
-  #Bucketlist li {
-    margin: 10px 0;
-    text-align: center;
-  }
+.Home,
+.Bucketlist,
+.Hobby,
+.about {
+  display: none;
+}
 
-  #Hobby img {
-    width: 350px;
-    margin-top: 20px;
-    border-radius: 0%;
-  }
+input[type="radio"][name="tab"] {
+  display: none;
+}
+
+#tab-home:checked ~ .content .Home,
+#tab-bucketlist:checked ~ .content .Bucketlist,
+#tab-hobby:checked ~ .content .Hobby,
+#tab-about:checked ~ .content .about {
+  display: block;
 }
