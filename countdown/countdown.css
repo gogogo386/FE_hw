@@ -1,0 +1,18 @@
+body {
+  font-family: "Dongle", sans-serif;
+}
+.countdown {
+  border: 1px solid lightgrey;
+  text-align: center;
+  width: 300px;
+  font-size: 20px;
+  border-radius: 15px;
+}
+.status {
+  font-size: 30px;
+}
+hr {
+  border-style: dotted;
+  border-width: 5px;
+  border-color: lightgray;
+}
