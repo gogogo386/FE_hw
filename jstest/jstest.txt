@@ -1,0 +1,33 @@
+1. 2번
+2. includes()
+3. numbers%2==0
+4. 3000 
+5. 
+6. #likeCount
+
+7. const lion = () => {
+    console.log(“자바스크립트 마스터를 해보자!”);
+};
+lion();
+
+8. 
+const isLogin;
+const Login = isLogin ? confirm("환영합니다!) : confirm("접근 권한이 없습니다.");
+
+9. 
+const name = prompt("무엇을 말하고 싶나요?");
+do {
+    prompt("무엇을 말하고 싶나요?);
+} while (name =! '끝')
+
+10. 
+let num = 1;
+let sum;
+const numbers = prompt("숫자를 입력하세요");
+while (num<=numbers){
+    num++;
+    sum =+ num;
+    alert("1부터 해당값까지의 합은",sum,"입니다.");
+}
+11.
+ randomNum() = Math.floor(Math.random() * 10) + 1;
