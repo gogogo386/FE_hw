@@ -1,0 +1,109 @@
+2번 답 : includes
+설명 : 특정 문자가 포함되어있는지 확인한다.
+       true, false를 반환하기 때문에 조건문에는 includes가 정답이다
+       
+3번 답 : num % 2 === 0
+설명 : ===는 두 피연산자의 값과 타입이 모두 같으면 true인 비교연산자 입니다
+
+5번 답 : appendChild
+설명 : 자식 요소로 추가하는 것 입니다. 
+       부모인 ul에 변경된 li를 넣어야 해서 appendChild를 사용해야 됩니다.
+
+6번 답 : textContent = count
+설명 : textContent는 요소의 텍스트를 읽고 쓸 수 있습니다.
+       이걸 사용해서 count를 업데이트 할 수 있습니다.
+
+8번 답 : alert(isLogin ? "환영합니다!" : "접근 권한이 없습니다.");
+설명 : 삼항연잔자 : 조건 ? 참일 때 : 거짓일 때 형태로 사용하는 연산자입니다
+
+9번 답 : 
+let userInput;
+do {
+    userInput = prompt("무엇을 말하고 싶나요?");
+} while (userInput !== "끝");
+설명 : !== 불일치 연산자이고 !=는 부등의 의미로 피연산자가 서로 다르면 true 입니다
+
+10번 답 : 
+let input = prompt("숫자를 입력하세요.");
+let num = Number(input); // 문자열 → 숫자 형변환
+
+let sum = 0;
+let i = 1;
+
+while (i <= num) {
+  sum += i;
+  i++;
+}
+alert(`1부터 해당값까지의 합은 ${sum}입니다.`);
+설명 : prompt()로 사용자에게 입력을 받습니다.
+       while() 반복문을 이용해 1부터 num까지 합산합니다.
+
+11번 답 :
+function randomNum() {
+    return Math.floor(Math.random() * 11);
+}
+
+let sum = 0;
+let arr = [];
+for (let i = 0; i < 3; i++) {
+    const num = randomNum();
+    arr.push(num);
+    console.log(`${i+1}번째 랜덤 난수 : ${num}`);
+    sum += num;
+}
+console.log(`3개의 합 : ${sum}`);
+설명 : Math.random()은 0보다 크거나 같고 1보다 작은 무작위 숫자를 반환합니다.
+       Math.floor는 인수와 같거나 작은 수 중에서 가장 큰 정수, 즉 정수를 얻게 해줍니다.
+       push()는 배열의 맨 뒤에 새로운 요소를 추가합니다.
+
+12번 답 :
+const arr1 = ["빨강", "주황", "노랑", "초록"];
+const arr2 = ["파랑", "남색", "보라", "핑크"];
+
+const combined = [...arr1, ...arr2];      
+console.log(combined);                     
+console.log(combined[3]);                   
+console.log(combined.slice(4, 9));  
+설명 : 전개 연산자인 Spread를 사용해서 합친다.
+       slice()를 사용해서 배열의 일부분을 잘라서 새 배열로 반환한다.
+
+13번 답 :
+const pastDate = new Date(2025, 4, 2); 
+console.log(pastDate);
+
+const today = new Date();
+document.write(`오늘 날짜: ${today.getFullYear()}년 ${today.getMonth()+1}월 ${today.getDate()}일<br>`);
+
+const diffTime = today - pastDate;
+const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+document.write(`${pastDate.getFullYear()}년 ${pastDate.getMonth()+1}월 ${pastDate.getDate()}일로부터 ${diffDays}일이 지났습니다.`);
+설명 : 자바스크립트에서 월은 0월부터 시작해서 4로 표기해야 합니다.
+       날짜 차이는 밀리초 단위로 계산 후 일로 변환하기 때문에 1000 * 60 * 60 * 24를 해줘야 합니다.
+       getFullYear() : 년도 반환/설정
+       getMonth() : 월 반환/ 설정(0~11)
+       getDate() : 일 반환/설정
+
+14번 답 : 
+  function change() {
+    var element = document.getElementById("name");
+    if (element.innerHTML === "likelion_1") {
+      element.innerHTML = "likelion_2";
+    } else if (element.innerHTML === "likelion_2") {
+      element.innerHTML = "likelion_3";
+    }
+  }
+  설명 : getElementById: id로 요소 선택
+         innerHTML : 요소의 HTML 내용 읽기/쓰기
+         else if는 조건이 참인 경우 실행하고 삼항연산자를 사용해도 된다
+
+15번 답 : 
+const person = {
+    name: prompt("이름을 입력하세요"),
+    age: prompt("나이를 입력하세요"),
+    greet: function() {
+        alert(`안녕, ${this.age}살 ${this.name}!!`);
+    }
+};
+person.greet();
+설명 : greet를 메서드로 만들고 this는 해당 메서드를 포함하고 있는 객체를 가리킨다.
+       
